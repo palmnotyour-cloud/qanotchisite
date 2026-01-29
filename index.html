@@ -3,26 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qanotchi — Ресторан авторской кухни</title>
+<title>Qanotchi — Luxury Dining</title>
+
+<!-- PREMIUM FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
-  color: #fff;
+/* ================= ROOT ================= */
+:root {
+  --gold: #d6b46a;
+  --gold-soft: #f0d999;
+  --dark: #0b0b0b;
+  --dark-soft: #141414;
 }
 
-/* HERO */
+/* ================= BODY ================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(214,180,106,0.08), transparent 40%),
+    linear-gradient(180deg, #070707, #000);
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+/* ================= HERO ================= */
 header {
   height: 100vh;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6)),
+    linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.6)),
     url("img/food1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -31,173 +49,190 @@ header {
 }
 
 .hero h1 {
-  font-size: 78px;
-  letter-spacing: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 84px;
+  letter-spacing: 10px;
   text-transform: uppercase;
+  color: var(--gold);
 }
 
 .hero p {
-  margin-top: 25px;
-  font-size: 24px;
+  margin-top: 30px;
+  font-size: 22px;
   opacity: 0.85;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 section {
-  padding: 120px 20px;
-  max-width: 1400px;
+  padding: 140px 24px;
+  max-width: 1500px;
   margin: auto;
 }
 
 section h2 {
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-size: 44px;
-  margin-bottom: 60px;
+  font-size: 46px;
+  margin-bottom: 70px;
+  color: var(--gold);
+  letter-spacing: 2px;
 }
 
 section h2::after {
   content: "";
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9a24d, #f5d27a);
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
   display: block;
-  margin: 25px auto 0;
+  margin: 30px auto 0;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about {
   max-width: 1000px;
   margin: auto;
   text-align: center;
   font-size: 20px;
-  line-height: 2;
+  line-height: 2.1;
   opacity: 0.9;
 }
 
-/* HUGE GALLERY */
+/* ================= PREMIUM GALLERY ================= */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 50px;
 }
 
 .card {
-  background: linear-gradient(180deg, #111, #000);
-  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.9));
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
-  transition: 0.4s;
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.9),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition: 0.5s;
 }
 
 .card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-14px);
+  box-shadow:
+    0 60px 140px rgba(0,0,0,1),
+    inset 0 0 0 1px rgba(214,180,106,0.25);
 }
 
 .card img {
   width: 100%;
-  height: 320px;
+  height: 340px;
   object-fit: cover;
+  filter: saturate(1.1) contrast(1.05);
 }
 
 .card .text {
-  padding: 28px;
+  padding: 36px;
 }
 
 .card h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  color: #f5d27a;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 14px;
+  color: var(--gold-soft);
 }
 
 .card p {
   font-size: 16px;
-  line-height: 1.9;
-  opacity: 0.9;
+  line-height: 2;
+  opacity: 0.88;
 }
 
-/* ATMOSPHERE */
+/* ================= ATMOSPHERE ================= */
 .atmosphere {
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+    linear-gradient(180deg, rgba(0,0,0,0.92), rgba(0,0,0,0.92)),
     url("img/food2.jpg") center/cover no-repeat;
-  padding: 140px 20px;
+  padding: 160px 24px;
   text-align: center;
 }
 
 .atmosphere h2 {
-  font-size: 48px;
-  margin-bottom: 30px;
+  font-size: 52px;
 }
 
 .atmosphere p {
   max-width: 900px;
   margin: auto;
   font-size: 22px;
-  line-height: 2;
+  line-height: 2.2;
   opacity: 0.9;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
-  background: linear-gradient(180deg, #0b0b0b, #000);
-  padding: 90px 20px 70px;
+  background:
+    radial-gradient(circle at top, rgba(214,180,106,0.08), transparent 50%),
+    linear-gradient(180deg, #0a0a0a, #000);
+  padding: 120px 24px 90px;
 }
 
 .contacts {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   font-size: 17px;
   opacity: 0.9;
 }
 
 .contacts p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
+/* ================= SOCIAL ================= */
 .social {
   display: flex;
   justify-content: center;
-  gap: 22px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
 .social a {
-  padding: 18px 30px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-  color: #fff;
+  padding: 18px 36px;
+  border-radius: 60px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.06), rgba(0,0,0,0.9));
+  color: var(--gold-soft);
   text-decoration: none;
-  letter-spacing: 1px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
-  transition: 0.3s;
+  letter-spacing: 2px;
+  font-size: 14px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.9),
+    inset 0 0 0 1px rgba(214,180,106,0.25);
+  transition: 0.35s;
 }
 
 .social a:hover {
-  background: linear-gradient(135deg, #c9a24d, #f5d27a);
+  background:
+    linear-gradient(135deg, var(--gold), var(--gold-soft));
   color: #000;
   transform: translateY(-6px);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
+/* ================= MOBILE ================= */
+@media (max-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .hero h1 {
-    font-size: 50px;
+    font-size: 56px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   .gallery {
     grid-template-columns: 1fr;
   }
-
   .hero h1 {
-    font-size: 36px;
+    font-size: 38px;
   }
-
   .social a {
     width: 100%;
     text-align: center;
@@ -211,30 +246,31 @@ footer {
 <header>
   <div class="hero">
     <h1>Qanotchi</h1>
-    <p>Ресторан, где вкус становится искусством</p>
+    <p>Luxury dining. Taste as an art form.</p>
   </div>
 </header>
 
 <section>
-  <h2>Философия ресторана</h2>
+  <h2>Философия</h2>
   <p class="about">
-    Qanotchi — это не просто ресторан. Это гастрономическое пространство,
-    созданное для тех, кто ценит глубину вкуса, эстетику подачи и атмосферу,
-    в которой каждая деталь работает на эмоцию гостя.
+    Qanotchi — это пространство высокого вкуса, где гастрономия,
+    эстетика и атмосфера объединяются в единый премиальный опыт.
+    Здесь каждая деталь продумана, каждая подача — выверена,
+    а каждый визит превращается в событие.
   </p>
 </section>
 
 <section>
-  <h2>Галерея блюд</h2>
+  <h2>Signature Dishes</h2>
   <div class="gallery">
 
     <div class="card">
       <img src="img/food1.jpg">
       <div class="text">
-        <h3>Авторское мясное блюдо</h3>
+        <h3>Signature Meat Experience</h3>
         <p>
-          Сочное мясо, приготовленное по уникальной технологии,
-          раскрывающее вкус через медленное томление и сложный баланс специй.
+          Глубокий вкус, медленное приготовление и баланс специй,
+          раскрывающий характер авторской кухни ресторана.
         </p>
       </div>
     </div>
@@ -242,10 +278,10 @@ footer {
     <div class="card">
       <img src="img/food2.jpg">
       <div class="text">
-        <h3>Современная интерпретация классики</h3>
+        <h3>Modern Classic</h3>
         <p>
-          Блюдо, вдохновлённое традициями, но переосмысленное
-          с использованием современных гастрономических подходов.
+          Переосмысление классических рецептов с современным
+          гастрономическим подходом и эстетикой подачи.
         </p>
       </div>
     </div>
@@ -253,10 +289,10 @@ footer {
     <div class="card">
       <img src="img/food3.jpg">
       <div class="text">
-        <h3>Подача как искусство</h3>
+        <h3>Visual Taste</h3>
         <p>
-          Здесь вкус начинается с визуального восприятия,
-          где каждая деталь тарелки продумана до мелочей.
+          Здесь визуальное восприятие становится первым этапом
+          гастрономического удовольствия.
         </p>
       </div>
     </div>
@@ -264,26 +300,44 @@ footer {
     <div class="card">
       <img src="img/food4.jpg">
       <div class="text">
-        <h3>Баланс текстур и ароматов</h3>
+        <h3>Texture & Aroma</h3>
         <p>
-          Сочетание мягкости, хруста и насыщенных ароматов,
-          создающее полноценный гастрономический опыт.
+          Сложная игра текстур и ароматов, создающая
+          насыщенный и запоминающийся вкус.
         </p>
       </div>
     </div>
 
-    <!-- ДУБЛИРУЕМ ДЛЯ МОЩИ -->
-    <div class="card"><img src="img/food1.jpg"><div class="text"><h3>Фирменное блюдо шефа</h3><p>Эксклюзивное блюдо, отражающее философию кухни и характер ресторана.</p></div></div>
-    <div class="card"><img src="img/food2.jpg"><div class="text"><h3>Идея и вкус</h3><p>Каждый ингредиент здесь выбран не случайно, а как часть общей концепции.</p></div></div>
+    <div class="card">
+      <img src="img/food1.jpg">
+      <div class="text">
+        <h3>Chef’s Vision</h3>
+        <p>
+          Авторское блюдо, отражающее философию кухни
+          и индивидуальный почерк шефа.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/food2.jpg">
+      <div class="text">
+        <h3>Gastronomic Balance</h3>
+        <p>
+          Идеальное сочетание ингредиентов,
+          вкусов и эстетики в каждой детали.
+        </p>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <section class="atmosphere">
-  <h2>Атмосфера Qanotchi</h2>
+  <h2>Atmosphere</h2>
   <p>
-    Тёплый свет, продуманный интерьер и спокойная энергия пространства
-    создают идеальное место для встреч, ужинов и особых моментов.
+    Приглушённый свет, премиальные материалы и спокойная энергия пространства
+    создают идеальное место для особых встреч и незабываемых вечеров.
   </p>
 </section>
 
@@ -296,9 +350,9 @@ footer {
   </div>
 
   <div class="social">
-    <a href="https://www.instagram.com/qanotchi" target="_blank">Instagram</a>
-    <a href="https://t.me/qanotchirestaurant" target="_blank">Telegram</a>
-    <a href="https://www.facebook.com/Qanotchi" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/qanotchi" target="_blank">INSTAGRAM</a>
+    <a href="https://t.me/qanotchirestaurant" target="_blank">TELEGRAM</a>
+    <a href="https://www.facebook.com/Qanotchi" target="_blank">FACEBOOK</a>
   </div>
 </footer>
 
