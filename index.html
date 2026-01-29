@@ -6,185 +6,176 @@
 <title>Qanotchi Restaurant</title>
 
 <style>
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= BODY ================= */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: radial-gradient(circle at top, #1a1a1a, #000);
   color: #fff;
-  overflow-x: hidden;
 }
 
-/* ================= HEADER ================= */
+/* ================= HERO ================= */
 header {
-  height: 90vh;
+  height: 95vh;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.6)),
+    linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6)),
     url("img/food1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(to top, #000, transparent);
-}
-
-.hero {
-  z-index: 2;
-  animation: fadeUp 1.5s ease;
 }
 
 .hero h1 {
-  font-size: 64px;
-  letter-spacing: 4px;
+  font-size: 70px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 }
 
 .hero p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
   opacity: 0.85;
 }
 
 /* ================= SECTIONS ================= */
 section {
-  padding: 80px 20px;
-  max-width: 1200px;
+  padding: 90px 20px;
+  max-width: 1300px;
   margin: auto;
 }
 
 section h2 {
   text-align: center;
-  font-size: 38px;
-  margin-bottom: 40px;
-  position: relative;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
 section h2::after {
   content: "";
-  width: 80px;
+  width: 100px;
   height: 3px;
   background: linear-gradient(90deg, #c9a24d, #f5d27a);
   display: block;
-  margin: 15px auto 0;
+  margin: 20px auto 0;
 }
 
 /* ================= ABOUT ================= */
 .about {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.8;
-  opacity: 0.9;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.9;
+  opacity: 0.9;
 }
 
-/* ================= GALLERY ================= */
+/* ================= BIG GALLERY ================= */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .gallery img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
   transition: 0.4s;
 }
 
 .gallery img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+  transform: scale(1.08);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.9);
+}
+
+/* ================= EXTRA SECTION ================= */
+.highlight {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url("img/food2.jpg") center/cover no-repeat;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.highlight h2 {
+  font-size: 44px;
+  margin-bottom: 25px;
+}
+
+.highlight p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 20px;
+  opacity: 0.9;
 }
 
 /* ================= FOOTER ================= */
 footer {
   background: linear-gradient(180deg, #0b0b0b, #000);
-  padding: 60px 20px 40px;
-  margin-top: 80px;
+  padding: 70px 20px 50px;
 }
 
 .contacts {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 15px;
-  opacity: 0.85;
+  margin-bottom: 50px;
+  font-size: 16px;
+  opacity: 0.9;
 }
 
 .contacts p {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* ================= SOCIAL ================= */
 .social {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .social a {
-  padding: 14px 22px;
-  border-radius: 30px;
+  padding: 16px 26px;
+  border-radius: 40px;
   background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
   letter-spacing: 1px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
   transition: 0.3s;
 }
 
 .social a:hover {
-  transform: translateY(-4px);
   background: linear-gradient(135deg, #c9a24d, #f5d27a);
   color: #000;
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: translateY(-5px);
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 42px;
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  section {
-    padding: 60px 16px;
+  .hero h1 {
+    font-size: 48px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
   .hero h1 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .social a {
@@ -207,19 +198,35 @@ footer {
 <section>
   <h2>О ресторане</h2>
   <p class="about">
-    Qanotchi — это ресторан с уникальной атмосферой,
-    где восточные традиции сочетаются с современным подходом к гастрономии.
+    Qanotchi — это пространство вкуса и атмосферы,
+    где каждая деталь создана для наслаждения гастрономией.
   </p>
 </section>
 
 <section>
-  <h2>Наши блюда</h2>
+  <h2>Галерея блюд</h2>
   <div class="gallery">
     <img src="img/food1.jpg">
     <img src="img/food2.jpg">
     <img src="img/food3.jpg">
     <img src="img/food4.jpg">
+    <img src="img/food1.jpg">
+    <img src="img/food2.jpg">
+    <img src="img/food3.jpg">
+    <img src="img/food4.jpg">
+    <img src="img/food1.jpg">
+    <img src="img/food2.jpg">
+    <img src="img/food3.jpg">
+    <img src="img/food4.jpg">
   </div>
+</section>
+
+<section class="highlight">
+  <h2>Атмосфера и вкус</h2>
+  <p>
+    Интерьер, кухня и сервис объединяются,
+    создавая уникальный опыт для каждого гостя.
+  </p>
 </section>
 
 <footer>
